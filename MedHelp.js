@@ -15,13 +15,20 @@ class MedHelp{
 
   write(path = this.path){
     const fs = require('fs');
-    fs.writeFile(path, JSON.stringify(this.patient, null, 2), err => { 
+    fs.writeFile(path, JSON.stringify(this.patient, null, 2), 
+      err => { 
       // Checking for errors 
       if (err) throw err;   
     });
   }
 
+  getData() {
+    // returns patient json
+    return this.patient;
+  }
+
   show() {
+    // prints patient json
     console.log(this.patient);
   }
 }
