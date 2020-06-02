@@ -4,6 +4,7 @@
   "description": "An app to help people manage their medications",
   "main": "index.js",
   "scripts": {
+  	"start": "electron .",
     "test": "node ."
   },
   "author": "Jaden Arceneaux",
