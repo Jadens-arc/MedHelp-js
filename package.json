@@ -1,0 +1,11 @@
+{
+  "name": "medhelp",
+  "version": "1.0.0",
+  "description": "An app to help people manage their medications",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "author": "Jaden Arceneaux",
+  "license": "ISC"
+}
