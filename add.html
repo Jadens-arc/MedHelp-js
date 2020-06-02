@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Medication</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+  <div class="tabs is-medium">
+    <ul>
+      <li>
+        <a href="index.html">
+          <span class="icon is-small"><i class="fas fa-home" aria-hidden="true"></i></span>
+          <span>Home</span>
+        </a>
+      </li>
+      <li class="is-active">
+        <a>
+          <span class="icon is-small"><i class="fas fa-plus" aria-hidden="true"></i></span>
+          <span>Add Medication</span>
+        </a>
+      </li>
+      <li>
+        <a href="share.html">
+          <span class="icon is-small"><i class="fas fa-share" aria-hidden="true"></i></span>
+          <span>Share</span>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+
+  <div class="container  is-fluid">
+    <div class="field">
+      <label class="label">Medication Name</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="(e.g. Tylenol)">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Amount</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="(e.g. 35mg)">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">When to take it</label>
+      <div class="select">
+        <select>
+          <option>Everyday</option>
+          <option>Every Other Day</option>
+          <option>Once a Week</option>
+          <option>Once a Month</option>
+          <option>Once a Year</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Other</label>
+      <div class="control">
+        <textarea class="textarea" placeholder="e.g. Take before eating"></textarea>
+      </div>
+    </div>
+  
+    <button class="button" type="submit">Add</button>
+    <hr>
+  </div>
+
+
+</body>
+</html>

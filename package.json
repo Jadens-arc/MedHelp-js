@@ -4,8 +4,12 @@
   "description": "An app to help people manage their medications",
   "main": "index.js",
   "scripts": {
+    "start": "electron .",
     "test": "node ."
   },
   "author": "Jaden Arceneaux",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.8.2"
+  }
 }
