@@ -6,11 +6,12 @@ class MedHelp {
     this.patient = require(path);
 	}
 
-  append(name, time, amount) {
+  append(name, frequency, amount, other) {
     // adds/updates entry to json
 		this.patient[name] = {
-      "time": time,
-      "amount": amount
+      "frequency": frequency,
+      "amount": amount,
+      "other": other
     };
 	}
 
