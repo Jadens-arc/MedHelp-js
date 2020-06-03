@@ -7,34 +7,60 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script defer src="addmedication.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+
+          // Add a click event on each of them
+          $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+
+              // Get the target from the "data-target" attribute
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+
+            });
+          });
+        }
+      });
+    </script>
   </head>
   <body>
-  <div class="tabs is-medium">
-    <ul>
-      <li>
-        <a href="index.html">
-          <span class="icon is-small"><i class="fas fa-home" aria-hidden="true"></i></span>
-          <span>Home</span>
-        </a>
-      </li>
-      <li class="is-active">
-        <a>
-          <span class="icon is-small"><i class="fas fa-plus" aria-hidden="true"></i></span>
-          <span>Add Medication</span>
-        </a>
-      </li>
-      <li>
-        <a href="share.html">
-          <span class="icon is-small"><i class="fas fa-share" aria-hidden="true"></i></span>
-          <span>Share</span>
-        </a>
-      </li>
-
-    </ul>
-  </div>
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" style="box-shadow: 0px 10px 10px #dbdbdb">
 
 
-  <div class="container  is-fluid">
+    <div id="navBar" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="index.html">
+          Home
+        </a>
+        <a class="navbar-item" href="add.html">
+          Add Medication
+        </a>
+        <a class="navbar-item" href="share.html">
+          Share
+        </a>
+      </div>
+    </div>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navBar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+  </nav>
+
+
+  <div style="margin-top: 60px" class="container  is-fluid">
     <div class="field">
       <label class="label">Medication Name</label>
       <div class="control">
@@ -68,8 +94,7 @@
         <textarea id="medication-other" class="textarea" placeholder="e.g. Take before eating"></textarea>
       </div>
     </div>
-  
-    <button id="addMedBtn"class="button" type="submit">Add</button>
+    <a id="addMedBtn"class="button" type="submit" href="index.html">Add</a>    
     <hr>
   </div>
 
