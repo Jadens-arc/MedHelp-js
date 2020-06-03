@@ -6,6 +6,7 @@
     <title>Add Medication</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script defer src="addmedication.js"></script>
   </head>
   <body>
   <div class="tabs is-medium">
@@ -37,21 +38,21 @@
     <div class="field">
       <label class="label">Medication Name</label>
       <div class="control">
-        <input class="input" type="text" placeholder="(e.g. Tylenol)">
+        <input id="medication-name" class="input" type="text" placeholder="(e.g. Tylenol)">
       </div>
     </div>
 
     <div class="field">
       <label class="label">Amount</label>
       <div class="control">
-        <input class="input" type="text" placeholder="(e.g. 35mg)">
+        <input id="medication-amount" class="input" type="text" placeholder="(e.g. 35mg)">
       </div>
     </div>
 
     <div class="field">
       <label class="label">When to take it</label>
       <div class="select">
-        <select>
+        <select id="medication-freq">
           <option>Everyday</option>
           <option>Every Other Day</option>
           <option>Once a Week</option>
@@ -64,11 +65,11 @@
     <div class="field">
       <label class="label">Other</label>
       <div class="control">
-        <textarea class="textarea" placeholder="e.g. Take before eating"></textarea>
+        <textarea id="medication-other" class="textarea" placeholder="e.g. Take before eating"></textarea>
       </div>
     </div>
   
-    <button class="button" type="submit">Add</button>
+    <button id="addMedBtn"class="button" type="submit">Add</button>
     <hr>
   </div>
 
