@@ -13,6 +13,7 @@ function createWindow () {
       nodeIntegration: true,
     }
   });
+  //win.removeMenu();
 
   // and load the index.html of the app.
   win.loadURL(url.format({

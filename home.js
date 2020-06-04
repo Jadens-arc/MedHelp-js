@@ -18,12 +18,59 @@ function makeList() {
         // create an item for each one
         listItem = document.createElement('li');
         listItem.setAttribute('class', 'box');
-        // Add the item text
-        listItem.innerHTML = key;
 
+
+        let amount = ((listData[key]["amount"]) == "" ? "" : `<p>Amount: ${listData[key]["amount"]}</p>`);
+        let frequency = ((listData[key]["frequency"]) == "" ? "" : `<p>When To Take: ${listData[key]["frequency"]}</p>`);
+        let other = ((listData[key]["other"]) == "" ? "" : `<p>Anything Else: ${listData[key]["other"]}</p>`);
+
+
+
+        // Add the item text
+        listItem.innerHTML = `
+        <div style="display: flex;">
+            <div style="">
+                <b>${key}</b>
+                <hr>
+                <small>${amount}</small>
+                <small>${frequency}</small>
+                <small>${other}</small>
+            </div>
+            <div style="position: absolute; right: calc(10vw + 20px);">
+                <div class="dropdown is-right" id="${key}Drop">
+                  <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2" id="${key}Btn">
+                      <span class="icon is-small">
+                        <i class="fas fa-cog" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                      <div class="dropdown-item">
+                        <a class="button">Delete</a>
+                        <a class="button">Edit</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        `
         // Add listItem to the listElement
         listElement.appendChild(listItem);
+
+        function handleClick() {
+            var dropdown = document.getElementById(`${key}Drop`);
+            dropdown.classList.toggle('is-active');
+        }
+
+        document.getElementById(`${key}Btn`).onclick = () => {handleClick()};
+
+        
     });
+
+
     listContainer
 }
 
