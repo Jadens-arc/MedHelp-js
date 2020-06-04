@@ -48,7 +48,7 @@ function makeList() {
                   <div class="dropdown-menu" role="menu">
                     <div class="dropdown-content">
                       <div class="dropdown-item">
-                        <a class="button">Delete</a>
+                        <a class="button" href="index.html" id="${key}DeleteBtn">Delete</a>
                         <a class="button">Edit</a>
                       </div>
                     </div>
@@ -60,14 +60,21 @@ function makeList() {
         // Add listItem to the listElement
         listElement.appendChild(listItem);
 
-        function handleClick() {
+        // bind dropdown click to dropdown button
+        function handleDropClick() {
             var dropdown = document.getElementById(`${key}Drop`);
             dropdown.classList.toggle('is-active');
         }
 
-        document.getElementById(`${key}Btn`).onclick = () => {handleClick()};
+        document.getElementById(`${key}Btn`).onclick = () => {handleDropClick()};
 
-        
+        // bind delete click to delete button
+        function handleDeleteClick() {
+            myHelper.remove(key);
+            myHelper.write();
+        }
+        document.getElementById(`${key}DeleteBtn`).onclick = () => {handleDeleteClick()};
+
     });
 
 
