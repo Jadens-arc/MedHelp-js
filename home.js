@@ -21,7 +21,7 @@ function makeList() {
 
 
         let amount = ((listData[key]["amount"]) == "" ? "" : `<p>Amount: ${listData[key]["amount"]}</p>`);
-        let frequency = ((listData[key]["frequency"]) == "" ? "" : `<p>When To Take: ${listData[key]["frequency"]}</p>`);
+        let frequency = ((listData[key]["frequency"]) == "Other" ? "" : `<p>When To Take: ${listData[key]["frequency"]}</p>`);
         let other = ((listData[key]["other"]) == "" ? "" : `<p>Anything Else: ${listData[key]["other"]}</p>`);
 
 
