@@ -49,7 +49,7 @@ function makeList() {
                     <div class="dropdown-content">
                       <div class="dropdown-item">
                         <a class="button" href="index.html" id="${key}DeleteBtn">Delete</a>
-                        <a class="button">Edit</a>
+                        <a class="button" href="add.html" id="${key}EditBtn">Edit</a>
                       </div>
                     </div>
                   </div>
@@ -75,6 +75,13 @@ function makeList() {
         }
         document.getElementById(`${key}DeleteBtn`).onclick = () => {handleDeleteClick()};
 
+        function handleEditClick() {
+            localStorage["medName"] = key;
+            localStorage["medAmt"] = listData[key]["amount"]
+            localStorage["medFreq"] = listData[key]["frequency"]
+            localStorage["medOther"] = listData[key]["other"]
+        }
+        document.getElementById(`${key}EditBtn`).onclick = () => {handleEditClick()};
     });
 
 
