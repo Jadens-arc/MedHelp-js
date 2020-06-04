@@ -26,6 +26,11 @@ class MedHelp {
     });
   }
 
+  remove(name) {
+    // removes key from dictionary
+    delete this.patient[name];
+  }
+
   getData() {
     // returns patient json
     return this.patient;
