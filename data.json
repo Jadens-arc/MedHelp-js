@@ -1,3 +1,12 @@
 {
-
+  "Tylenol": {
+    "frequency": "Everyday",
+    "amount": "42mg",
+    "other": "Take after eating"
+  },
+  "Inhaler": {
+    "frequency": "As Needed",
+    "amount": "two puffs",
+    "other": ""
+  }
 }
