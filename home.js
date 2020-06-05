@@ -48,7 +48,7 @@ function makeList() {
                   <div class="dropdown-menu" role="menu">
                     <div class="dropdown-content">
                       <div class="dropdown-item">
-                        <a class="button" href="index.html" id="${key}DeleteBtn">Delete</a>
+                        <a class="button is-danger" href="index.html" id="${key}DeleteBtn">Delete</a>
                         <a class="button" href="add.html" id="${key}EditBtn">Edit</a>
                       </div>
                     </div>

@@ -117,10 +117,22 @@
         <textarea id="medication-other" class="textarea" placeholder="e.g. Take before eating"></textarea>
       </div>
     </div>
-    <a id="addMedBtn"class="button" type="submit" href="index.html">Add</a>    
-    <a class="button" type="submit" href="index.html">Cancel</a>  
+    <a id="addMedBtn" class="button is-primary" type="submit" href="index.html">Add</a>    
+    <a id="closeBtn" class="button" type="submit" href="index.html">Cancel</a>  
     <hr>
   </div>
+  <script type="text/javascript">
+    function clearVariables() {
+      localStorage["medName"] = "";
+      localStorage["medAmt"] = "";
+      localStorage["medFreq"] = "";
+      localStorage["medOther"] = "";
+    }
+
+    document.getElementById('addMedBtn').onclick = () => {clearVariables()};
+    document.getElementById('closeBtn').onclick = () => {clearVariables()};
+
+  </script>
 
 
 </body>
