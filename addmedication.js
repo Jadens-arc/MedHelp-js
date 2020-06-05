@@ -6,10 +6,10 @@ const addMedBtn = document.getElementById("addMedBtn");
 const medhelp = require('./MedHelp')
 const myHelper = new medhelp.MedHelp('./data.json');
 
-medName.value = localStorage["medName"];
-medAmt.value = localStorage["medAmt"];
-medFreq.value = localStorage["medFreq"];
-medOther.value = localStorage["medOther"];
+medName.value = ((localStorage["medName"]) == null  ? "" : localStorage["medName"]);
+medAmt.value = ((localStorage["medAmt"]) == null ? "" : localStorage["medAmt"]);
+medFreq.value = ((localStorage["medFreq"]) == null ? "" : localStorage["medFreq"]);
+medOther.value = ((localStorage["medOther"]) == null ? "" : localStorage["medOther"]);
 
 addMedBtn.onclick = () => {
 	myHelper.append(medName.value,
